@@ -1,0 +1,7 @@
+{
+  "name": "SueldoApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

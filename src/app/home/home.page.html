@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Bienvenido a SueldoApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">SueldoApp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-input type="number" placeholder="cantidad de horas" [(ngModel)]="horas"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" placeholder="Precio por hora" [(ngModel)]="precioHora"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="primary" (click)="calcular()">Realizar Calculo</ion-button>
+  </ion-list>
+    <ion-card>
+      <ion-card-header>
+        <h6>Elaborado por Daniel Contreras</h6>
+      </ion-card-header>
+      <ion-card-content>
+       <h5>Resultado</h5>
+       <p>Bruto: $ <span>{{bruto.toFixed(2)}}</span></p>
+       <p>Liquido: $ <span>{{liquido.toFixed(2)}}</span></p>
+       <p>ISSS: $ <span>{{isss.toFixed(2)}}</span></p>
+       <p>AFP: $ <span>{{afp.toFixed(2)}}</span></p>
+       <p>Renta: $ <span>{{renta.toFixed(2)}}</span></p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
